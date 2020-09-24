@@ -56,4 +56,4 @@ function init() {
 // function call to initialize program
 init();
 
-console.log(process.argv)
+// console.log(process.argv)
