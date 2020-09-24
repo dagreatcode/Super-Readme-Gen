@@ -43,6 +43,16 @@ const questions = [
     ])
 ];
 
+// fs.writeFile("test.txt", "utf8", function(error, data) {
+
+//     if (error) {
+//       return console.log(error);
+//     }
+  
+//     console.log(data);
+  
+// });
+
 // function to write README file
 function writeToFile(fileName, data) {
     return ``;
