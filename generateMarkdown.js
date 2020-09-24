@@ -14,6 +14,7 @@ function generateMarkdown(data) {
 ####
 ${data.license}
 MIT
+${licenseText}
 `;
 }
 
