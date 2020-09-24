@@ -11,19 +11,34 @@ const inquirer = require("inquirer");
 const questions = [
     inquirer.prompt([
         {
-        name: "userName",
+        name: "title",
         type: "input",
-        message: "What is your name?",
+        message: "Title?",
         },
         {
-        name: "hobby",
+        name: "description",
         type: "input",
-        message: "What is your favorite hobby?",
+        message: "Description?",
         },
         {
-        name: "linkedIn",
+        name: "usage",
         type: "input",
-        message: "What is your LinkedIn URL?",
+        message: "Usage?",
+        },
+        {
+        name: "contributing",
+        type: "input",
+        message: "Contributing?",
+        },
+        {
+        name: "test",
+        type: "input",
+        message: "test?",
+        },
+        {
+        name: "license",
+        type: "input",
+        message: "License",
         },
     ])
 ];
