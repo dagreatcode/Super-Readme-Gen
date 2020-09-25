@@ -47,7 +47,7 @@ const questions = [
 
         const markdown = generateMarkdown(response);
 
-        writeFileAsync("READMEtest.md", markdown)
+        writeFileAsync("README.md", markdown)
         .then(() => {
           console.log("Successfully wrote file.");
         })
