@@ -3,9 +3,10 @@
 // fs
 const fs = require("fs");
 const util = require("util");
+const generateMarkdown = require("./utils/generateMarkdown");
 const inquirer = require("inquirer");
 
-// const writeFileAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
@@ -41,6 +42,22 @@ const questions = [
         message: "License",
         },
     ])
+    .then((response) => {
+        console.log(response);
+
+        const markdown = generateMarkdown(response);
+
+        writeFileAsync("readme2.md", markdown)
+        .then(() => {
+          console.log("Successfully wrote file.");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    })
+    .catch((err) => {
+      console.log(err);
+    })
 ];
 
 // fs.writeFile("test.txt", "utf8", function(error, data) {
